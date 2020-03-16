@@ -1,0 +1,18 @@
+﻿.navbar {
+    color: white;
+    background: none; 
+    font-family: 'AmplitudeWide';
+}
+
+.banner {
+    background: url("../images/banner.jpg") no-repeat center center local;
+    height: 100vh;
+    max-height: 500px;
+    position: relative;
+    background-size: cover;
+}
+
+@font-face {
+    font-family: 'AmplitudeWide';
+    src: url('../fonts/AmplitudeWide.ttf')
+}
