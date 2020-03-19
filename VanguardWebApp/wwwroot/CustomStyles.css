@@ -1,11 +1,14 @@
 ﻿.navbar {
     color: white;
-    background: none; 
+    background: none;
     font-family: 'AmplitudeWide';
+    font-size: 12px;
+    letter-spacing: 3px;
+    opacity: 0.9;
 }
 
 .banner {
-    background: url("../images/banner.jpg") no-repeat center center local;
+    background: url("../images/banner.jpg") no-repeat;
     height: 100vh;
     max-height: 500px;
     position: relative;

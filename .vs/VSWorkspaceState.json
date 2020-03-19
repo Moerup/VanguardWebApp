@@ -4,8 +4,9 @@
     "\\VanguardWebApp",
     "\\VanguardWebApp\\Pages",
     "\\VanguardWebApp\\wwwroot",
+    "\\VanguardWebApp\\wwwroot\\css",
     "\\VanguardWebApp\\wwwroot\\images"
   ],
-  "SelectedNode": "\\VanguardWebApp\\wwwroot\\images\\banner.jpg",
+  "SelectedNode": "\\VanguardWebApp\\wwwroot\\css\\site.css",
   "PreviewInSolutionExplorer": false
 }
