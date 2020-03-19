@@ -15,7 +15,46 @@
     background-size: cover;
 }
 
+html, body {
+    font-family: 'Europa';
+    font-size: 16;
+    letter-spacing: 0.4px;
+    font-weight: 400;
+    line-height: 1.6em;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+h6 {
+    color: #000000;
+    font-weight: 600;
+}
+
+.body_main {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.body_content {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.breaker {
+    height: 0px;
+    margin: 0px;
+    border-bottom: 1px solid #cfcfcf;
+    font-size: 1px;
+}
+
+/*FONTS*/
+
 @font-face {
     font-family: 'AmplitudeWide';
     src: url('../fonts/AmplitudeWide.ttf')
 }
+
+@font-face {
+    font-family: 'Europa';
+    src: url('../fonts/Europa.ttf')
+}
+
