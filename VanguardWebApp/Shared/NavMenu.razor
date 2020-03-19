@@ -1,38 +1,61 @@
-﻿<nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="d-flex flex-grow-1">
-        <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
-        <a class="navbar-brand d-none d-lg-inline-block" href="#">
-            <img src="images/vanguard.png" height="80" />
-        </a>
-        <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
-            <img src="//placehold.it/40?text=LOGO" alt="logo">
-        </a>
-        <div class="w-100 text-right">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </div>
-    <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
-        <ul class="navbar-nav ml-auto flex-nowrap">
+﻿@inject IJSRuntime JSRuntime;
+
+<nav class="navbar navbar-expand-lg fixed-top" id="navBar">
+    <a class="navbar-brand" href="#">
+        <img src="images/vanguard.png" height="75" />
+    </a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse">
+        <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a href="#" class="nav-link m-2 menu-item active">STREAMS</a>
+                <a class="nav-link" @onclick="@(e => NavigateTo("Phase"))">PHASE SCHEDULE</a>
             </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link m-2 menu-item active">STRATEGY</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" id="dropDownStrategy" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">STRATEGY</a>
+                <div class="dropdown-menu animate slideIn" aria-labelledby="dropDownStrategy">
+                    <a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1XG1qzSoiZZeqM-P8TLfDv9tyY-2roReR98kDlxD_Pgk/edit#gid=0" target="_blank">RAID ASSIGNMENTS</a>
+                    <a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1dhdU2bLx7bjcs0p9haUbIIvxyflYeEQLSIi8Rtwtmm4/edit#gid=445057313" target="_blank">TL:DR BWL</a>
+                </div>
             </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link m-2 menu-item active">RAID LOOT</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" id="dropDownPrice" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PRICE TABLE</a>
+                <div class="dropdown-menu animate slideIn" aria-labelledby="dropDownPrice">
+                    <a class="dropdown-item" @onclick="@(e => NavigateTo("MoltenCore"))" href="">MOLTEN CORE</a>
+                    <a class="dropdown-item" @onclick="@(e => NavigateTo("BlackwingLair"))" href="">BLACKWING LAIR</a>
+                    <a class="dropdown-item" @onclick="@(e => NavigateTo("Onyxia"))" href="">ONYXIA</a>
+                    <a class="dropdown-item" @onclick="@(e => NavigateTo("ZulGurub"))" href="">ZUL'GURUB</a>
+                </div>
             </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link m-2 menu-item active">GUILD BANK</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" id="dropDownStreams" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">STREAMS</a>
+                <div class="dropdown-menu animate slideIn" aria-labelledby="dropDownStreams">
+                    <a class="dropdown-item" href="https://www.twitch.tv/adicted117" target="_blank">ENTI</a>
+                    <a class="dropdown-item" href="https://www.twitch.tv/phounus" target="_blank">MAREST</a>
+                    <a class="dropdown-item" href="https://www.twitch.tv/listetyv" target="_blank">QTNOME</a>
+                    <a class="dropdown-item" href="https://www.twitch.tv/doukou1" target="_blank">DOUKOU</a>
+                    <a class="dropdown-item" href="https://www.twitch.tv/fatzombiepig" target="_blank">DOMNAL</a>
+                </div>
             </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link m-2 menu-item active">WARCRAFT LOGS</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" id="dropDownGuild" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">STRATEGY</a>
+                <div class="dropdown-menu animate slideIn" aria-labelledby="dropDownGuild">
+                    <a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1XG1qzSoiZZeqM-P8TLfDv9tyY-2roReR98kDlxD_Pgk/edit#gid=0">RAID ASSIGNMENTS</a>
+                    <a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1dhdU2bLx7bjcs0p9haUbIIvxyflYeEQLSIi8Rtwtmm4/edit#gid=445057313">TL:DR BWL</a>
+                </div>
             </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link m-2 menu-item active">DISCORD</a>
+            <li>
+                <a class="btn btn-vanguard" href="https://discordapp.com/invite/WCAMPTT" target="_blank">DISCORD</a>
             </li>
         </ul>
     </div>
 </nav>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="text-center body_main">
+        <h1 class="display-4 banner-text-header">A new start for serious players.</h1>
+        <p class="lead banner-text">"Welcome to Vanguard a new classic wow guild on Gandling-EU. Our goal is to provide a structured and ambitious environment for serious and mature wow classic players. If you feel stuck in your old guild and want a fresh start or a new player with a competitive mindset then please get in touch"</p>
+    </div>
+</div>

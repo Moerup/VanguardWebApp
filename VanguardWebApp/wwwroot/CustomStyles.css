@@ -4,7 +4,13 @@
     font-family: 'AmplitudeWide';
     font-size: 12px;
     letter-spacing: 3px;
-    opacity: 0.9;
+}
+
+.navbar-inner {
+}
+
+.dropdown-toggle {
+    color: white !important;
 }
 
 .banner {
@@ -44,6 +50,110 @@ h6 {
     margin: 0px;
     border-bottom: 1px solid #cfcfcf;
     font-size: 1px;
+}
+
+/* Jumbotron (Banner) */
+
+.jumbotron {
+    background-image: url("../images/banner.jpg");
+    background-size: cover;
+    color: white;
+    height: 535px;
+}
+
+.jumbotron-padding {
+    padding: 32px;
+}
+
+.banner-text-header {
+    margin-bottom: 30px;
+    margin-top: 200px;
+    font-size: 30px;
+}
+
+.banner-text {
+    font-size: 16px;
+}
+
+/* Buttons */
+
+.btn-vanguard {
+    padding: 0px, 5px, 0px, 5px;
+    background: #323b3b !important; /*2cc8df*/
+    border: none;
+    border-radius: 0 !important;
+    color: white;
+}
+
+.btn-vanguard:hover {
+    background: #787878 !important;
+    outline: none;
+    box-shadow: none !important;
+    color: white;
+}
+
+.btn-vanguard:focus {
+    background: #787878 !important;
+    outline: none;
+    box-shadow: none !important;
+    color: white;
+}
+
+.btn-vanguard:active {
+    background: #787878 !important;
+    outline: none;
+    box-shadow: none !important;
+    color: white;
+}
+
+/* Dropdowns */
+
+@media (min-width: 992px) {
+    .animate {
+        animation-duration: 0.3s;
+        -webkit-animation-duration: 0.3s;
+        animation-fill-mode: both;
+        -webkit-animation-fill-mode: both;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes slideIn {
+    0% {
+        -webkit-transform: transform;
+        -webkit-opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        -webkit-opacity: 1;
+    }
+
+    0% {
+        -webkit-transform: translateY(1rem);
+        -webkit-opacity: 0;
+    }
+}
+
+.slideIn {
+    -webkit-animation-name: slideIn;
+    animation-name: slideIn;
 }
 
 /*FONTS*/
