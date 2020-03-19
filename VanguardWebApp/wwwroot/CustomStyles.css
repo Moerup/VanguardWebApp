@@ -6,7 +6,8 @@
     letter-spacing: 3px;
 }
 
-.navbar-inner {
+.nav-item {
+    padding:0px 10px 0px 10px;
 }
 
 .dropdown-toggle {
@@ -21,18 +22,15 @@
     background-size: cover;
 }
 
-html, body {
+.body_main {
+    margin-left: 25%;
+    margin-right: 25%;
     font-family: 'Europa';
     font-size: 16px;
     letter-spacing: 0.4px;
     font-weight: 400;
     line-height: 1.6em;
     color: rgba(0, 0, 0, 0.75);
-}
-
-.body_main {
-    margin-left: 25%;
-    margin-right: 25%;
 }
 
 .body_content {
@@ -68,20 +66,26 @@ html, body {
     margin-bottom: 30px;
     margin-top: 200px;
     font-size: 30px;
+    color:white;
+    opacity: 0.75;
 }
 
 .banner-text {
     font-size: 16px;
+    color: white;
+    opacity: 0.75;
 }
 
 /* Buttons */
 
 .btn-vanguard {
-    padding: 0px, 5px, 0px, 5px;
+    padding: 10px 10px 10px 10px;
     background: #323b3b !important; /*2cc8df*/
     border: none;
     border-radius: 0 !important;
     color: white;
+    font-family: Europa;
+    font-size: 10px;
 }
 
 .btn-vanguard:hover {
