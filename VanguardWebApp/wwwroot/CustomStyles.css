@@ -17,16 +17,11 @@
 
 html, body {
     font-family: 'Europa';
-    font-size: 16;
+    font-size: 16px;
     letter-spacing: 0.4px;
     font-weight: 400;
     line-height: 1.6em;
     color: rgba(0, 0, 0, 0.75);
-}
-
-h6 {
-    color: #000000;
-    font-weight: 600;
 }
 
 .body_main {
@@ -39,6 +34,10 @@ h6 {
     margin-bottom: 50px;
 }
 
+.text_indent_div {
+    margin-left: 5%;
+}
+
 .breaker {
     height: 0px;
     margin: 0px;
@@ -46,7 +45,36 @@ h6 {
     font-size: 1px;
 }
 
+.fit-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+/*IMAGES*/
+.desat-image {
+    filter: saturate(75%);
+}
+
 /*FONTS*/
+a {
+    color: #000000;
+}
+
+h5 {
+    color: #000000;
+    font-weight: 600;
+}
+
+h6 {
+    color: #000000;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.small-font {
+    font-size: 12px;
+    line-height: 1em;
+}
 
 @font-face {
     font-family: 'AmplitudeWide';
