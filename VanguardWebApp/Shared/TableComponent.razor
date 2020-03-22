@@ -1,0 +1,43 @@
+﻿<table class="tftable" border="1">
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th><center>GP VALUE</center></th>
+    </tr>
+    @foreach (var loot in Boss.Loot)
+    {
+    <tr>
+        <td width="28">
+            <a href="https://classicdb.ch/?item=@loot.ItemID" target="_blank">
+                <img src="@loot.ImagePath">
+            </a>
+        </td>
+        <td>
+            @loot.Name
+        </td>
+
+        @foreach (var priority in loot.Priorities)
+        {
+            <td class="@CalculatePriorityClass(priority)" width="28">
+                <img src="@FormatSpec(priority)" title=@priority.Spec.ToString()/>
+            </td>
+        }
+        <td>
+            <center>@loot.GPValue</center>
+        </td>
+    </tr>
+    }
+</table>

@@ -7,21 +7,7 @@
             @foreach (var bosses in Raid.Bosses)
             {
                 <h3>@bosses.Name</h3>
-                <table class="tftable" border="1">
-                    <tr><th></th><th></th><th><center>GP VALUE</center></th></tr>
-                    @foreach (var loot in bosses.Loot)
-                    {
-                        <tr><td width="28"><img src="@loot.ImagePath"></td><td><h3>@loot.Name</h3></td>
-
-                        @foreach (var priority in loot.Priorities)
-                        {
-                            <td><img src="@FormatSpec(priority)"></td>
-                            //<h3>@priority.PriorityValue</h3>
-
-                        }
-                        </tr >
-                    }
-                </table>                
+                <TableComponent Boss=bosses/>         
             }
         }
     </div>
