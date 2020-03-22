@@ -1,7 +1,12 @@
 ﻿@page "/raid/{RaidName}"
 
+
 <div class="body_main">
     <div>
+        @if (dataIsLoaded == false)
+        {
+            <p>Fetching loot data. Please wait...</p>
+        }
         @if (dataIsLoaded && Raid != null)
         {
             @foreach (var bosses in Raid.Bosses)
