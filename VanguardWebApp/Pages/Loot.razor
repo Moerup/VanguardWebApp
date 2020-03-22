@@ -7,6 +7,18 @@
             @foreach (var bosses in Raid.Bosses)
             {
                 <h3>@bosses.Name</h3>
+
+                @foreach (var loot in bosses.Loot)
+                {
+                    <h3>@loot.Name</h3>
+                    <h3>@loot.ImagePath</h3>
+
+                    @foreach (var priority in loot.Priorities)
+                    {
+                        <h3>@priority.Spec</h3>
+                        <h3>@priority.PriorityValue</h3>
+                    }
+                }
             }
         }
     </div>
