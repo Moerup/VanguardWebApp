@@ -20,6 +20,12 @@ namespace VanguardWebApp.Pages
 
         public Raid Raid { get; set; } = new Raid();
 
+        public string FormatSpec(Priority priority)
+        {
+            var formattedSpec = $"/images/loot/{priority.Spec}.png";
+            return formattedSpec;
+        }
+
         protected override async Task OnInitializedAsync()
         {
             Raid = await APIAccessService.GetRaidLootAsync(RaidName);

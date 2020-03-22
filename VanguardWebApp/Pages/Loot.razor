@@ -1,24 +1,27 @@
 ﻿@page "/raid/{RaidName}"
 
-<div class="container-fluid">
-    <div class="row justify-content-center">
+<div class="body_main">
+    <div>
         @if (dataIsLoaded && Raid != null)
         {
             @foreach (var bosses in Raid.Bosses)
             {
                 <h3>@bosses.Name</h3>
-
-                @foreach (var loot in bosses.Loot)
-                {
-                    <h3>@loot.Name</h3>
-                    <h3>@loot.ImagePath</h3>
-
-                    @foreach (var priority in loot.Priorities)
+                <table class="tftable" border="1">
+                    <tr><th></th><th></th><th><center>GP VALUE</center></th></tr>
+                    @foreach (var loot in bosses.Loot)
                     {
-                        <h3>@priority.Spec</h3>
-                        <h3>@priority.PriorityValue</h3>
+                        <tr><td width="28"><img src="@loot.ImagePath"></td><td><h3>@loot.Name</h3></td>
+
+                        @foreach (var priority in loot.Priorities)
+                        {
+                            <td><img src="@FormatSpec(priority)"></td>
+                            //<h3>@priority.PriorityValue</h3>
+
+                        }
+                        </tr >
                     }
-                }
+                </table>                
             }
         }
     </div>

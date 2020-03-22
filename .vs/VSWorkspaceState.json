@@ -5,8 +5,9 @@
     "\\VanguardWebApp\\Pages",
     "\\VanguardWebApp\\wwwroot",
     "\\VanguardWebApp\\wwwroot\\css",
+    "\\VanguardWebApp\\wwwroot\\fonts",
     "\\VanguardWebApp\\wwwroot\\images"
   ],
-  "SelectedNode": "\\VanguardWebApp\\wwwroot\\css\\site.css",
+  "SelectedNode": "\\VanguardWebApp\\Pages\\Index.razor",
   "PreviewInSolutionExplorer": false
 }
