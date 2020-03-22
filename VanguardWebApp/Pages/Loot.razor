@@ -1,0 +1,13 @@
+﻿@page "/raid/{RaidName}"
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        @if (dataIsLoaded && Raid != null)
+        {
+            @foreach (var bosses in Raid.Bosses)
+            {
+                <h3>@bosses.Name</h3>
+            }
+        }
+    </div>
+</div>
