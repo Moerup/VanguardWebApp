@@ -14,7 +14,7 @@ namespace VanguardWebApp.Shared
 
         public string FormatSpec(Priority priority)
         {
-            if (priority == null)
+            if (priority.PriorityValue == 0)
             {
                 return $"/images/loot/{priority.Spec}_off.png";
             }
