@@ -204,3 +204,87 @@ h6 {
     src: url('../fonts/Europa.ttf')
 }
 
+/*LOOT TABLE*/
+.table_div {
+    margin-left: 400px;
+    margin-right: 400px;
+    font-family: 'Europa';
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    font-weight: 400;
+    line-height: 1.6em;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.tftable img {
+    width: 35px;
+    height: 35px;
+}
+
+.table_lootname {
+    text-align: center;
+    max-width: 100px;
+    overflow: hidden;
+}
+
+.table_gpvalue {
+    width: 100px;
+}
+
+.tftable {
+    width: 100%;
+    margin-bottom: 25px;
+    white-space: nowrap;
+
+    font-size: 13px;
+    color: #d5d5d5;
+    width: 100%;
+    border-width: 1px;
+    border-color: #a9a9a9;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+.tftable tr {
+    height:35px;
+    background-color: #2a3838;
+}
+
+.tftable td {
+    font-size: 13px;
+    border-width: 2px;
+    padding: 1px;
+    border-style: solid;
+    border-color: #000000;
+}
+
+.tftable tr:hover {
+    background-color: #1a2323;
+}
+
+.tftable th {
+    font-size: 12px;
+    background-color: #1a2323;
+    border-width: 2px;
+    padding: 1px;
+    border-style: solid;
+    border-color: #000000;
+    text-align: left;
+}
+
+.tftable td.one {
+    background-color: #FF8000;
+}
+
+.tftable td.two {
+    background-color: #A335EE;
+}
+
+.tftable td.three {
+    background-color: #0070FF;
+}
+
+.indextable {
+    width: 100%;
+    border-color: #FFFFFF;
+}

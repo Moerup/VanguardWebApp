@@ -21,11 +21,11 @@
     {
     <tr>
         <td width="28">
-            <a href="https://classicdb.ch/?item=@loot.ItemID" target="_blank">
+            <a href="https://classic.wowhead.com/item=@loot.ItemID" target="_blank">
                 <img src="@loot.ImagePath">
             </a>
         </td>
-        <td>
+        <td class="table_lootname">
             @loot.Name
         </td>
 
@@ -35,7 +35,7 @@
                 <img src="@FormatSpec(priority)" title=@priority.Spec.ToString()/>
             </td>
         }
-        <td>
+        <td class="table_gpvalue">
             <center>@loot.GPValue</center>
         </td>
     </tr>

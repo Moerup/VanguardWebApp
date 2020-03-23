@@ -1,7 +1,6 @@
 ﻿@page "/raid/{RaidName}"
 
-
-<div class="body_main">
+<div class="table_div">
     <div>
         @if (dataIsLoaded == false)
         {
@@ -12,7 +11,7 @@
             @foreach (var bosses in Raid.Bosses)
             {
                 <h3>@bosses.Name</h3>
-                <TableComponent Boss=bosses/>         
+                <TableComponent Boss=bosses />
             }
         }
     </div>
