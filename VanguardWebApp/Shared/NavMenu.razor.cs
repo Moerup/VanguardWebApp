@@ -13,7 +13,7 @@ namespace VanguardWebApp.Shared
 
         private void NavigateTo(string page)
         {
-            NavigationManager.NavigateTo($@"/raid/{page}");
+            NavigationManager.NavigateTo(page);
         }
     }
 }

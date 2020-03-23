@@ -10,9 +10,9 @@
 
     <div class="navbar-collapse collapse">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
+            @*<li class="nav-item">
                 <a class="nav-link" @onclick="@(e => NavigateTo("Phase"))">PHASE SCHEDULE</a>
-            </li>
+            </li>*@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="" id="dropDownStrategy" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">STRATEGY</a>
                 <div class="dropdown-menu animate slideIn" aria-labelledby="dropDownStrategy">
@@ -23,13 +23,13 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="" id="dropDownPrice" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PRICE TABLE</a>
                 <div class="dropdown-menu animate slideIn" aria-labelledby="dropDownPrice">
-                    <a class="dropdown-item" @onclick="@(e => NavigateTo("MC"))" href="">MOLTEN CORE</a>
-                    <a class="dropdown-item" @onclick="@(e => NavigateTo("BWL"))" href="">BLACKWING LAIR</a>
-                    <a class="dropdown-item" @onclick="@(e => NavigateTo("ONY"))" href="">ONYXIA</a>
-                    <a class="dropdown-item" @onclick="@(e => NavigateTo("ZG"))" href="">ZUL'GURUB</a>
-                    <a class="dropdown-item" @onclick="@(e => NavigateTo("AQ20"))" href="">RUINS OF AHN'QIRAJ</a>
-                    <a class="dropdown-item" @onclick="@(e => NavigateTo("AQ40"))" href="">TEMPLE OF AHN'QIRAJ</a>
-                    <a class="dropdown-item" @onclick="@(e => NavigateTo("NAXX"))" href="">NAXXRAMAS</a>
+                    <a class="dropdown-item" @onclick="@(e => NavigateTo("/raid/MC"))" href="">MOLTEN CORE</a>
+                    <a class="dropdown-item" @onclick="@(e => NavigateTo("/raid/BWL"))" href="">BLACKWING LAIR</a>
+                    <a class="dropdown-item" @onclick="@(e => NavigateTo("/raid/ONY"))" href="">ONYXIA</a>
+                    <a class="dropdown-item" @onclick="@(e => NavigateTo("/raid/ZG"))" href="">ZUL'GURUB</a>
+                    <a class="dropdown-item" @onclick="@(e => NavigateTo("/raid/AQ20"))" href="">RUINS OF AHN'QIRAJ</a>
+                    <a class="dropdown-item" @onclick="@(e => NavigateTo("/raid/AQ40"))" href="">TEMPLE OF AHN'QIRAJ</a>
+                    <a class="dropdown-item" @onclick="@(e => NavigateTo("/raid/NAXX"))" href="">NAXXRAMAS</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -43,14 +43,14 @@
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="" id="dropDownGuild" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">STRATEGY</a>
+                <a class="nav-link dropdown-toggle" href="" id="dropDownGuild" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">THE GUILD</a>
                 <div class="dropdown-menu animate slideIn" aria-labelledby="dropDownGuild">
-                    <a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1XG1qzSoiZZeqM-P8TLfDv9tyY-2roReR98kDlxD_Pgk/edit#gid=0">RAID ASSIGNMENTS</a>
-                    <a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1dhdU2bLx7bjcs0p9haUbIIvxyflYeEQLSIi8Rtwtmm4/edit#gid=445057313">TL:DR BWL</a>
+                    <a class="dropdown-item" href="https://classic.warcraftlogs.com/guild/id/497676">WARCRAFT LOGS</a>
+                    <a class="dropdown-item" href="https://classicguildbank.com/#/guild/readonly/Js3ux0FTkuReeNa8e7Mxw">GUILD BANK</a>
                 </div>
             </li>
             <li class="nav-item btn-vanguard-text">
-                <a class="btn btn-vanguard  navbar-btn" href="https://discordapp.com/invite/WCAMPTT" target="_blank">DISCORD</a>
+                <a class="btn btn-vanguard navbar-btn" href="https://discordapp.com/invite/WCAMPTT" target="_blank">DISCORD</a>
             </li>
         </ul>
     </div>
@@ -60,5 +60,11 @@
     <div class="text-center body_main">
         <h1 class="display-4 banner-text-header">A new start for serious players.</h1>
         <p class="lead banner-text">"Welcome to Vanguard a new classic wow guild on Gandling-EU. Our goal is to provide a structured and ambitious environment for serious and mature wow classic players. If you feel stuck in your old guild and want a fresh start or a new player with a competitive mindset then please get in touch"</p>
+        <div class="justify-content-center">
+            <a class="btn btn-vanguard" @onclick="@(e => NavigateTo("/Apply"))" href="">
+                <span class="banner-text banner-button-text">APPLY NOW</span>
+            </a>
+            @*<a class="btn btn-vanguard"><span class="banner-text">Roster</span></a>*@
+        </div>
     </div>
 </div>

@@ -80,6 +80,12 @@
     opacity: 0.75;
 }
 
+.banner-button-text {
+    font-family: 'Europa';
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
 /* Buttons */
 
 .btn-vanguard {
