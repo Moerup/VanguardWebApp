@@ -1,30 +1,37 @@
-﻿using System;
+﻿using Discord;
+using Discord.Webhook;
+using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using VanguardWebApp.Models;
 
 public class DiscordWebHookService : IDisposable
 {
-    private readonly WebClient _client;
-    public string WebHook { get; set; }
-    public string UserName { get; set; }
-    public string ProfilePicture { get; set; }
+    private readonly DiscordWebhookClient _client;
+    private readonly string _webHook = "https://discordapp.com/api/webhooks/692091179189141575/KFmdNtnxoHruB4bRNNmqM7jJ-5xCPk4cdxjJCC7fpXZufBqN6p0FmgTKJIIgQGvJKNDT";
 
     public DiscordWebHookService()
     {
-        _client = new WebClient();
+        _client = new DiscordWebhookClient(_webHook);
     }
 
-    public void SendMessage(string message)
+    public void SendMessage(Application application)
     {
-        var discordValues = new NameValueCollection();
-        discordValues.Add("username", UserName);
-        discordValues.Add("content", message);
+        var embeds = new List<Embed>();
+        var builder = new EmbedBuilder();
 
-        _client.UploadValues(WebHook, discordValues);
+        builder.AddField("Character name:", application.CharacterName);
+        builder.AddField("Class:", application.Class);
+        builder.AddField("Spec:", application.Spec);
+        builder.AddField("Message:", application.Message);
+
+        embeds.Add(builder.Build());
+
+        _client.SendMessageAsync(embeds: embeds);
         Dispose();
     }
 

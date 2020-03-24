@@ -1,3 +1,74 @@
 ﻿@page "/Apply"
 
-<button class="btn btn-primary" @onclick="@(e => SendApplication("Testing"))"></button>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 style="white-space:pre-wrap;">General Info</h1>
+
+            <p class="" style="white-space:pre-wrap;">Level: 
+                <br>Semi-Hardcore</p>
+                <p class="" style="white-space:pre-wrap;">Raid days:<br>Wednesday 20:00-23:00 cet. ( only if needed )<br>Sunday 20:00-23:00 cet.</p>
+                <p class="" style="white-space:pre-wrap;">Loot rules:<br>Priority System with a customized EPGP price list.<br>
+            </p>
+
+            <p class="" style="white-space:pre-wrap;">Mandatory Addons:
+                <br>https://www.curseforge.com/wow/addons/cepgp
+                <br>https://www.curseforge.com/wow/addons/angry-assignments
+                <br>https://www.curseforge.com/wow/addons/threatclassic2
+            </p>
+
+        </div>
+        <div class="col">
+
+            <h1 style="white-space:pre-wrap;">Apply</h1>
+            <p style="white-space:pre-wrap;">please read the 
+                <a href="/informations">info</a>, 
+                <a href="/loot-rules">loot rules</a> and
+                <a href="/expectations"> expectations</a> pages.
+            </p>
+
+            <EditForm Model="@_application" OnValidSubmit="SendApplication">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <p>
+                    <label>
+                        Character name:
+                        <InputText @bind-Value="_application.CharacterName" />
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Class:
+                        <InputText @bind-Value="_application.Class" />
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Spec:
+                        <InputText @bind-Value="_application.Spec" />
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Message:
+                        <InputTextArea @bind-Value="_application.Message" />
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Requirements:
+                        <InputCheckbox @bind-Value="_application.Requirements" />
+                    </label>
+                </p>
+
+                <button type="submit">SUBMIT</button>
+
+            </EditForm>
+        </div>
+    </div>
+</div>

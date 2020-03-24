@@ -4,11 +4,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using VanguardWebApp.Models;
 
 namespace VanguardWebApp.Pages
 {
     public partial class Apply
     {
+        private readonly Application _application = new Application();
+
         private readonly DiscordWebHookService _client;
 
         public Apply()
@@ -16,13 +19,11 @@ namespace VanguardWebApp.Pages
             _client = new DiscordWebHookService();
         }
 
-        public void SendApplication(string message)
+        private void SendApplication()
         {
             using (_client)
             {
-                _client.UserName = "ApplicationBot";
-                _client.WebHook = "https://discordapp.com/api/webhooks/691748687608807516/QtrfyclUbq9Lojew6QZWe9IrTaluu3LYUk8K9fy3HPFt_eDoSUf7CffeJZnnUXUiTdIT";
-                _client.SendMessage(message);
+                _client.SendMessage(_application);
             }
         }
     }
