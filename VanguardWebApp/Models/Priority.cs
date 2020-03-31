@@ -18,6 +18,7 @@ namespace VanguardWebApp.Models
         Restoration,
         Marksmanship,
         Frost,
+        Fire,
         Destruction,
         Combat,
         Fury,
