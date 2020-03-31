@@ -23,8 +23,7 @@ namespace VanguardWebApp.Models
         Combat,
         Fury,
         Protection,
-        Mitigation,
-        Offtank
+        Mitigation
     }
 
     public class Priority
