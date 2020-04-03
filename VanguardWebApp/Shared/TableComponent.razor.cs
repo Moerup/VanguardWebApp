@@ -43,5 +43,17 @@ namespace VanguardWebApp.Shared
 
             return "norank";
         }
+
+        public string ReturnBiSInfo(Loot loot)
+        {
+            if (loot.Quality)
+            {
+                return $"{loot.Name} *";
+            }
+            else
+            {
+                return loot.Name;
+            }
+        }
     }
 }
