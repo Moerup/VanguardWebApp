@@ -1,72 +1,83 @@
 ﻿@page "/Apply"
 
-<div class="container">
+<div class="container body_main" style="margin-bottom: 100px;">
     <div class="row">
         <div class="col">
-            <h1 style="white-space:pre-wrap;">General Info</h1>
+            <h1>General Info</h1>
 
-            <p class="" style="white-space:pre-wrap;">Level: 
-                <br>Semi-Hardcore</p>
-                <p class="" style="white-space:pre-wrap;">Raid days:<br>Wednesday 20:00-23:00 cet. ( only if needed )<br>Sunday 20:00-23:00 cet.</p>
-                <p class="" style="white-space:pre-wrap;">Loot rules:<br>Priority System with a customized EPGP price list.<br>
-            </p>
+            <ul class="apply-list">
+                <li class="font-weight-bold">Level:</li>
+                <li>Semi-Hardcore</li>
+            </ul>
 
-            <p class="" style="white-space:pre-wrap;">Mandatory Addons:
-                <br>https://www.curseforge.com/wow/addons/cepgp
-                <br>https://www.curseforge.com/wow/addons/angry-assignments
-                <br>https://www.curseforge.com/wow/addons/threatclassic2
-            </p>
+            <ul class="apply-list">
+                <li class="font-weight-bold">Raid days:</li>
+                <li>Wednesday 20:00-23:00 CET (If needed)</li>
+                <li>Sunday 20:00-23:00 CET (Main raid)</li>
+            </ul>
+
+            <ul class="apply-list">
+                <li class="font-weight-bold">Loot rules:</li>
+                <li>Priority System with a customized EPGP price list.</li>
+            </ul>
+
+            <ul class="apply-list">
+                <li class="font-weight-bold">Mandatory Addons:</li>
+                <li>https://www.curseforge.com/wow/addons/cepgp</li>
+                <li>https://www.curseforge.com/wow/addons/angry-assignments</li>
+                <li>https://www.curseforge.com/wow/addons/threatclassic2</li>
+            </ul>
 
         </div>
+
         <div class="col">
 
-            <h1 style="white-space:pre-wrap;">Apply</h1>
-            <p style="white-space:pre-wrap;">please read the 
-                <a href="/informations">info</a>, 
-                <a href="/loot-rules">loot rules</a> and
-                <a href="/expectations"> expectations</a> pages.
-            </p>
+            <h1>Apply</h1>
+
 
             <EditForm Model="@_application" OnValidSubmit="SendApplication">
+                <div class="alert @StatusClass">@StatusMessage</div>
                 <DataAnnotationsValidator />
                 <ValidationSummary />
 
-                <p>
-                    <label>
-                        Character name:
-                        <InputText @bind-Value="_application.CharacterName" />
-                    </label>
-                </p>
+                <div class="form-group">
+                    <label>Character Name:</label>
+                    <div>
+                        <InputText class="form-control" @bind-Value="_application.CharacterName" />
+                    </div>
+                </div>
 
-                <p>
-                    <label>
-                        Class:
-                        <InputText @bind-Value="_application.Class" />
-                    </label>
-                </p>
 
-                <p>
-                    <label>
-                        Spec:
-                        <InputText @bind-Value="_application.Spec" />
-                    </label>
-                </p>
+                <div class="form-group">
+                    <label>Class:</label>
+                    <div>
+                        <InputText class="form-control" @bind-Value="_application.Class" />
+                    </div>
+                </div>
 
-                <p>
-                    <label>
-                        Message:
-                        <InputTextArea @bind-Value="_application.Message" />
-                    </label>
-                </p>
+                <div class="form-group">
+                    <label>Spec:</label>
+                    <div>
+                        <InputText class="form-control" @bind-Value="_application.Spec" />
+                    </div>
+                </div>
 
-                <p>
+                <div class="form-group">
+                    <label>Message:</label>
+                    <div>
+                        <InputTextArea class="form-control" rows="3" @bind-Value="_application.Message" />
+                    </div>
+                </div>
+
+                <div class="form-group">
                     <label>
-                        Requirements:
                         <InputCheckbox @bind-Value="_application.Requirements" />
+                        I understand all information on this webpage
                     </label>
-                </p>
+                </div>
 
-                <button type="submit">SUBMIT</button>
+
+                <button class="btn btn-lg btn-dark" type="submit">SUBMIT</button>
 
             </EditForm>
         </div>
