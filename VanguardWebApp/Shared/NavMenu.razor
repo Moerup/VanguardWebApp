@@ -1,18 +1,15 @@
 ﻿@inject IJSRuntime JSRuntime;
 
-<nav class="navbar navbar-expand-lg fixed-top" id="navBar">
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark" id="navBar">
     <a class="navbar-brand" href="#">
         <img src="images/vanguard.png" height="75" />
     </a>
-    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="navbar-collapse collapse">
+    <div class="navbar-collapse collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-            @*<li class="nav-item">
-                <a class="nav-link" @onclick="@(e => NavigateTo("Phase"))">PHASE SCHEDULE</a>
-            </li>*@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="" id="dropDownStrategy" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">STRATEGY</a>
                 <div class="dropdown-menu animate slideIn" aria-labelledby="dropDownStrategy">
@@ -57,7 +54,7 @@
 </nav>
 
 <div class="jumbotron jumbotron-fluid">
-    <div class="text-center body_main">
+    <div class="text-center body_main margin-index">
         <h1 class="display-4 banner-text-header">A new start for serious players.</h1>
         <p class="lead banner-text">"Welcome to Vanguard a new classic wow guild on Gandling-EU. Our goal is to provide a structured and ambitious environment for serious and mature wow classic players. If you feel stuck in your old guild and want a fresh start or a new player with a competitive mindset then please get in touch"</p>
         <div class="justify-content-center">

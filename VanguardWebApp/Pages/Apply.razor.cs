@@ -10,9 +10,16 @@ namespace VanguardWebApp.Pages
 {
     public partial class Apply
     {
+        [Inject]
+        NavigationManager NavigationManager { get; set; }
+
         private readonly Application _application = new Application();
 
         private readonly DiscordWebHookService _client;
+
+        private string StatusMessage;
+
+        private string StatusClass;
 
         public Apply()
         {
@@ -25,6 +32,8 @@ namespace VanguardWebApp.Pages
             {
                 _client.SendMessage(_application);
             }
+            StatusClass = "alert-success";
+            StatusMessage = "Your application was sent, we will contact you shortly!";
         }
     }
 }
