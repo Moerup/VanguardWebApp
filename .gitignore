@@ -6,3 +6,6 @@
 /VanguardWebApp/bin/Debug/netcoreapp3.1
 /VanguardWebApp/obj
 /VanguardWebApp/wwwroot/css/open-iconic/README.md
+/VanguardWebApp/bin/Release/netcoreapp3.1
+/VanguardWebApp/.config
+/VanguardWebApp/Properties/PublishProfiles
