@@ -33,7 +33,7 @@ namespace VanguardWebApp.Pages
                 _client.SendMessage(_application);
             }
             StatusClass = "alert-success";
-            StatusMessage = "Your application was sent, we will contact you shortly!";
+            StatusMessage = "Your application was sent, please contact us ingame to make sure we received your application!";
         }
     }
 }

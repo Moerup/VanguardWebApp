@@ -18,6 +18,7 @@ namespace VanguardWebApp.Models
         public string Spec { get; set; }
 
         [Required]
+        [StringLength(1024, ErrorMessage = "Message too long. Max 1024 chars")]
         public string Message { get; set; }
 
         [Required]
