@@ -30,5 +30,15 @@ namespace VanguardWebApp.Services
             var model = JsonConvert.DeserializeObject<Raid>(result);
             return model;
         }
+
+        public async Task<Roster> GetRosterAsync()
+        {
+            var requestUrl = @$"{_endpoint}Roster";
+            using var response = await _client.GetAsync(requestUrl);
+            using var content = response.Content;
+            string result = await content.ReadAsStringAsync();
+            var model = JsonConvert.DeserializeObject<Roster>(result);
+            return model;
+        }
     }
 }

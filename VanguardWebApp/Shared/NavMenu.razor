@@ -10,9 +10,6 @@
 
     <div class="navbar-collapse collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-            @*<li class="nav-item">
-                <a class="nav-link" @onclick="@(e => NavigateTo("PhaseSchedule"))">PHASE SCHEDULE</a>
-            </li>*@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="" id="dropDownStrategy" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RESOURCES</a>
                 <div class="dropdown-menu animate slideIn" aria-labelledby="dropDownStrategy">
@@ -47,6 +44,7 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="" id="dropDownGuild" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">THE GUILD</a>
                 <div class="dropdown-menu animate slideIn" aria-labelledby="dropDownGuild">
+                    <a class="dropdown-item" @onclick="@(e => NavigateTo("Roster"))" href="">ROSTER</a>
                     <a class="dropdown-item" @onclick="@(e => NavigateTo("PhaseSchedule"))" href="">PHASE SCHEDULE</a>
                     <a class="dropdown-item" href="https://classic.warcraftlogs.com/guild/id/497676">WARCRAFT LOGS</a>
                     <a class="dropdown-item" href="https://classicguildbank.com/#/guild/readonly/Js3ux0FTkuReeNa8e7Mxw">GUILD BANK</a>
