@@ -7,12 +7,14 @@
         }
         @if (dataIsLoaded && Roster != null)
         {
-            <h1>@CalculateRosterNumber()</h1>
+        <div class="text-center">
+            <h1 class="">Roster size: @CalculateRosterNumber()</h1>
+        </div>
             @foreach (var rosterSpec in Roster.RosterSpecs)
             {
-                <h1>@rosterSpec.Spec</h1>
-                <h1>@rosterSpec.Players.Count().ToString()</h1>
-                <h5><b>@rosterSpec.Spec.ToString().ToUpper()</b></h5>
+                <div>
+                    <h5><b class="float-left"></b>@rosterSpec.Spec.ToString().ToUpper()<b class="float-right">@rosterSpec.Players.Count().ToString()</b></h5>
+                </div>
                 <PlayerComponent RosterSpec=rosterSpec />
             }
         }
