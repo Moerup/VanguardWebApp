@@ -17,6 +17,16 @@ namespace VanguardWebApp.Pages
 
         public Roster Roster { get; set; } = new Roster();
 
+        public string CalculateRosterNumber()
+        {
+            int rosterNumber = 0;
+            foreach (var rosterSpec in Roster.RosterSpecs)
+            {
+                rosterNumber += rosterSpec.Players.Count();
+            }
+            return rosterNumber.ToString();
+        }
+
         protected override async Task OnInitializedAsync()
         {
             Roster = await APIAccessService.GetRosterAsync();

@@ -7,9 +7,11 @@
         }
         @if (dataIsLoaded && Roster != null)
         {
+            <h1>@CalculateRosterNumber()</h1>
             @foreach (var rosterSpec in Roster.RosterSpecs)
             {
                 <h1>@rosterSpec.Spec</h1>
+                <h1>@rosterSpec.Players.Count().ToString()</h1>
                 <PlayerComponent RosterSpec=rosterSpec />
             }
         }
