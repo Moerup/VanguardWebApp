@@ -13,7 +13,7 @@ namespace VanguardWebApp.Services
     public class APIAccessService
     {
         private HttpClient _client;
-        private readonly string _endpoint = "https://vanguardapi.azurewebsites.net/api/raid/";
+        private readonly string _endpoint = "https://vanguardapi.azurewebsites.net/api";
 
         public APIAccessService()
         {
@@ -23,7 +23,7 @@ namespace VanguardWebApp.Services
 
         public async Task<Raid> GetRaidLootAsync(string raidName)
         {
-            var requestUrl = @$"{_endpoint}{raidName}";
+            var requestUrl = @$"{_endpoint}/raid/{raidName}";
             using var response = await _client.GetAsync(requestUrl);
             using var content = response.Content;
             string result = await content.ReadAsStringAsync();
@@ -33,7 +33,7 @@ namespace VanguardWebApp.Services
 
         public async Task<Roster> GetRosterAsync()
         {
-            var requestUrl = @$"{_endpoint}Roster";
+            var requestUrl = @$"{_endpoint}/Roster";
             using var response = await _client.GetAsync(requestUrl);
             using var content = response.Content;
             string result = await content.ReadAsStringAsync();

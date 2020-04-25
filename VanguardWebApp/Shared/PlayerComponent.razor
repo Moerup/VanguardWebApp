@@ -1,0 +1,16 @@
+﻿<table class="tftable" border="1">
+    @foreach (var player in RosterSpec.Players)
+    {
+        <tr>
+            <td>
+                @RosterSpec.Spec.ToString()
+            </td>
+            <td>
+                @player.Name.ToString()
+            </td>
+            <td>
+                <img src="@GetNationalityFlag(player)" title=@player.Nationality.ToString() />
+            </td>
+        </tr>
+    }
+</table>
