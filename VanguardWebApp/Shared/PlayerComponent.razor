@@ -3,13 +3,19 @@
     {
         <tr>
             <td>
-                <img src="@GetSpecIcon()" title=@RosterSpec.Spec.ToString() />
-            </td>
-            <td>
-                @player.Name.ToString()
-            </td>
-            <td>
-                <img src="@GetNationalityFlag(player)" title=@player.Nationality.ToString() />
+                <div class="container">
+                    <div class="row">
+                        <div class="left-div">
+                            <img src="@GetSpecIcon()" title=@RosterSpec.Spec.ToString() />
+                        </div>
+                        <div class="center-div">
+                            <b>@player.Name.ToString().ToUpper()</b>
+                        </div>
+                        <div class="right-div">
+                            <img src="@GetNationalityFlag(player)" title=@player.Nationality.ToString() />
+                        </div>
+                    </div>
+                </div>
             </td>
         </tr>
     }

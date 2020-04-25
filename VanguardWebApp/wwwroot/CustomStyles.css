@@ -219,6 +219,25 @@ h6 {
     font-family: 'Europa';
     src: url('../fonts/Europa.ttf')
 }
+/*ROSTER PAGE*/
+.left-div {
+    float:left;
+}
+
+.center-div {
+    margin: auto;
+}
+
+.right-div {
+    float: right;
+    margin-right: 10px;
+}
+
+.right-div-img {
+    width: 80%;
+    height: auto;
+}
+
 
 /*LOOT TABLE*/
 .table_div {
@@ -251,7 +270,6 @@ h6 {
     width: 100%;
     margin-bottom: 25px;
     white-space: nowrap;
-
     font-size: 13px;
     color: #d5d5d5;
     width: 100%;
@@ -262,8 +280,8 @@ h6 {
 }
 
 .tftable tr {
-    height:35px;
-    background-color: #2a3838;
+    height: 35px;
+    background-color: #1a2323;
 }
 
 .tftable td {
@@ -275,7 +293,7 @@ h6 {
 }
 
 .tftable tr:hover {
-    background-color: #1a2323;
+    background-color: #2a3838;
 }
 
 .tftable th {
