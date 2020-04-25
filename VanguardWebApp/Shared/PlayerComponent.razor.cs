@@ -17,5 +17,11 @@ namespace VanguardWebApp.Shared
             var formattedSpec = $"/images/flags/{player.Nationality}.png";
             return formattedSpec;
         }
+
+        public string GetSpecIcon()
+        {
+            var formattedSpec = $"/images/spec/{RosterSpec.Spec}.png";
+            return formattedSpec;
+        }
     }
 }
