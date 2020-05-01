@@ -23,6 +23,11 @@ namespace VanguardWebApp.Shared
             return formattedSpec;
         }
 
+        public string GetIconPath(string Id)
+        {
+            return $"/images/icons/{Id}.png";
+        }
+
         public string CalculatePriorityClass(Priority priority)
         {
             if (priority == null)

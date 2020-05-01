@@ -1,0 +1,20 @@
+﻿@foreach (var phase in Phases)
+{
+    <div class="col">
+        <table class="tftable" border="1">
+            @foreach (var gear in phase.Gear)
+            {
+                <tr>
+                    <td width="28">
+                        <a href="https://classic.wowhead.com/item=@gear.ItemId" target="_blank">
+                            <img src=@GetIconPath(gear.ItemId)>
+                        </a>
+                    </td>
+                    <td class="table_lootname">
+                        @gear.Name
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+}

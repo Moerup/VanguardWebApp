@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using VanguardWebApp.Models;
+using VanguardWebApp.Models.BiS;
 
 namespace VanguardWebApp.Services
 {
@@ -38,6 +39,16 @@ namespace VanguardWebApp.Services
             using var content = response.Content;
             string result = await content.ReadAsStringAsync();
             var model = JsonConvert.DeserializeObject<Roster>(result);
+            return model;
+        }
+
+        public async Task<BiS> GetBiSLists()
+        {
+            var requestUrl = @$"{_endpoint}/bis";
+            using var response = await _client.GetAsync(requestUrl);
+            using var content = response.Content;
+            string result = await content.ReadAsStringAsync();
+            var model = JsonConvert.DeserializeObject<BiS>(result);
             return model;
         }
     }
