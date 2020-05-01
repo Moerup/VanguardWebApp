@@ -15,22 +15,16 @@ namespace VanguardWebApp.Pages
 
         private readonly Application _application = new Application();
 
-        private readonly DiscordWebHookService _client;
-
         private string StatusMessage;
 
         private string StatusClass;
 
-        public Apply()
-        {
-            _client = new DiscordWebHookService();
-        }
-
         private void SendApplication()
         {
-            using (_client)
+            var client = new DiscordWebHookService();
+            using (client)
             {
-                _client.SendMessage(_application);
+                client.SendMessage(_application);
             }
             StatusClass = "alert-success";
             StatusMessage = "Your application was sent, please contact us ingame to make sure we received your application!";
