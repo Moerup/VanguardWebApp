@@ -1,7 +1,12 @@
 ﻿@foreach (var phase in Phases)
 {
     <div class="col">
+        <b>@phase.Name.ToUpper()</b>
         <table class="tftable" border="1">
+            <tr>
+                <th></th>
+                <th></th>
+            </tr>
             @foreach (var gear in phase.Gear)
             {
                 <tr>
