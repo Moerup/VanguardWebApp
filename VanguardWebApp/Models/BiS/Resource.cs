@@ -5,12 +5,10 @@ using System.Threading.Tasks;
 
 namespace VanguardWebApp.Models.BiS
 {
-    public class BiSSpec
+    public class Resource
     {
         public string Name { get; set; }
 
-        public List<Resource> Resources { get; set; }
-
-        public List<Phase> Phases { get; set; }
+        public string Url { get; set; }
     }
 }
