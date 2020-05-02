@@ -1,4 +1,4 @@
-﻿@page "/guides"
+﻿@page "/bislists"
 
     <div class="container body_main">
         @if (dataIsLoaded == false)
@@ -9,15 +9,19 @@
         {
             @foreach (var biSSpec in BiS.Specs)
             {
-                <div class="row">
-                    <h1>@biSSpec.Name</h1>
-                </div>
-                <div class="row">
-                    @*Phase lists*@
-                    <div class="col">
-                        <div class="row">
-                            <PhaseTableComponent Phases=biSSpec.Phases />
+                <div class="body_content">
+                    <div class="row">
+                        <div class="col left-div">
+                            <img src="/images/spec/fury.png"/>
+                            <h5>@biSSpec.Name.ToUpper()</h5>
                         </div>
+                        <div class="col right-div text-sm-right">
+                            <b>RESOURCES</b>
+                            <p style="font-size: 12px;">HIT VS. AP // FIGHT CLUB</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <PhaseTableComponent Phases=biSSpec.Phases />
                     </div>
                 </div>
                 <div class="breaker"></div>

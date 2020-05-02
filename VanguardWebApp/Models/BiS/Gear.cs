@@ -9,6 +9,8 @@ namespace VanguardWebApp.Models.BiS
 {
     public class Gear
     {
+        public string Slot { get; set; }
+
         public string Name { get; set; }
 
         [BsonElement("Id")]

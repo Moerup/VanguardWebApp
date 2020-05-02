@@ -10,25 +10,31 @@
 
     <div class="navbar-collapse collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="" id="dropDownStrategy" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RESOURCES</a>
-                <div class="dropdown-menu animate slideIn" aria-labelledby="dropDownStrategy">
-                    <a class="dropdown-item" href="https://www.raidcalendar.com/" target="_blank">RAID CALENDAR</a>
-                    <a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/14-wRzwKSprZlZb_Nd83t_RwojyHwGqGF2z2OwLEhHs0/edit#gid=0" target="_blank">ZG ENCHANTS</a>
-                    <a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1XG1qzSoiZZeqM-P8TLfDv9tyY-2roReR98kDlxD_Pgk/edit#gid=0" target="_blank">RAID ASSIGNMENTS</a>
-                    <a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1dhdU2bLx7bjcs0p9haUbIIvxyflYeEQLSIi8Rtwtmm4/edit#gid=445057313" target="_blank">TL:DR BWL</a>
-                </div>
+            <li class="navbar-text">
+                <a @onclick="@(e => NavigateTo("/bislists"))" href="">BIS LISTS</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="" id="dropDownPrice" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PRICE TABLE</a>
+                <a class="nav-link dropdown-toggle" href="" id="dropDownPrice" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PRICE TABLES</a>
                 <div class="dropdown-menu animate slideIn" aria-labelledby="dropDownPrice">
+                    <a class="dropdown-item" @onclick="@(e => NavigateTo("/raid/ONY"))" href="">ONYXIA</a>
                     <a class="dropdown-item" @onclick="@(e => NavigateTo("/raid/MC"))" href="">MOLTEN CORE</a>
                     <a class="dropdown-item" @onclick="@(e => NavigateTo("/raid/BWL"))" href="">BLACKWING LAIR</a>
-                    <a class="dropdown-item" @onclick="@(e => NavigateTo("/raid/ONY"))" href="">ONYXIA</a>
                     <a class="dropdown-item" @onclick="@(e => NavigateTo("/raid/ZG"))" href="">ZUL'GURUB</a>
                     <a class="dropdown-item" @onclick="@(e => NavigateTo("/raid/AQ20"))" href="">RUINS OF AHN'QIRAJ</a>
                     <a class="dropdown-item" @onclick="@(e => NavigateTo("/raid/AQ40"))" href="">TEMPLE OF AHN'QIRAJ</a>
                     <a class="dropdown-item" @onclick="@(e => NavigateTo("/raid/NAXX"))" href="">NAXXRAMAS</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" id="dropDownGuild" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">THE GUILD</a>
+                <div class="dropdown-menu animate slideIn" aria-labelledby="dropDownGuild">
+                    <a class="dropdown-item" @onclick="@(e => NavigateTo("Roster"))" href="">ROSTER</a>
+                    <a class="dropdown-item" @onclick="@(e => NavigateTo("PhaseSchedule"))" href="">PHASE SCHEDULE</a>
+                    <a class="dropdown-item" href="https://classic.warcraftlogs.com/guild/id/497676">WARCRAFT LOGS</a>
+                    <a class="dropdown-item" href="https://classicguildbank.com/#/guild/readonly/Js3ux0FTkuReeNa8e7Mxw">GUILD BANK</a>
+                    <a class="dropdown-item" href="https://www.raidcalendar.com/" target="_blank">RAID CALENDAR</a>
+                    <a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/14-wRzwKSprZlZb_Nd83t_RwojyHwGqGF2z2OwLEhHs0/edit#gid=0" target="_blank">ZG ENCHANTS</a>
+                    <a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1XG1qzSoiZZeqM-P8TLfDv9tyY-2roReR98kDlxD_Pgk/edit#gid=0" target="_blank">RAID ASSIGNMENTS</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -39,15 +45,6 @@
                     <a class="dropdown-item" href="https://www.twitch.tv/listetyv" target="_blank">QTNOME</a>
                     <a class="dropdown-item" href="https://www.twitch.tv/doukou1" target="_blank">DOUKOU</a>
                     <a class="dropdown-item" href="https://www.twitch.tv/fatzombiepig" target="_blank">DOMNAL</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="" id="dropDownGuild" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">THE GUILD</a>
-                <div class="dropdown-menu animate slideIn" aria-labelledby="dropDownGuild">
-                    <a class="dropdown-item" @onclick="@(e => NavigateTo("Roster"))" href="">ROSTER</a>
-                    <a class="dropdown-item" @onclick="@(e => NavigateTo("PhaseSchedule"))" href="">PHASE SCHEDULE</a>
-                    <a class="dropdown-item" href="https://classic.warcraftlogs.com/guild/id/497676">WARCRAFT LOGS</a>
-                    <a class="dropdown-item" href="https://classicguildbank.com/#/guild/readonly/Js3ux0FTkuReeNa8e7Mxw">GUILD BANK</a>
                 </div>
             </li>
             <li class="nav-item btn-vanguard-text">
