@@ -10,33 +10,21 @@
             @foreach (var biSSpec in BiS.Specs)
             {
                 <div class="body_content">
-                    @*<div class="row">
-                        <div class="col flex-row">
-                            <img src="/images/spec/{}.png"/>
-                            <h5>@biSSpec.Name.ToUpper()</h5>
-                        </div>
-                        <div class="col right-div text-sm-right">
-                            <b>RESOURCES</b>
-                            <p style="font-size: 12px;">HIT VS. AP // FIGHT CLUB</p>
-                        </div>
-                    </div>*@
-
                     <div class="row">
-
                         <div class="col">
                             <div class="float-left">
-                                <h5><img src="@GetIconPath(biSSpec.Name)" />@biSSpec.Name.ToUpper()</h5>
+                                <h5><img style="margin-bottom:4px" src="@GetIconPath(biSSpec.Name)" width="28" height="28"/>  @biSSpec.Name.ToUpper()</h5>
                             </div>
 
                             <div class="float-right ml-auto">
                                 <div class="text-right">
-                                    <b>RESOURCES</b>
+                                    <h5>RESOURCES</h5>
                                 </div>
                                 <div>
-                                    <p style="font-size: 12px;">
+                                    <p class="text-right" style="font-size: 12px;">
                                         @foreach (var resource in biSSpec.Resources)
                                         {
-                                            <a href=@resource.Url target="_blank">
+                                            <a class ="bis-links" href=@resource.Url target="_blank">
                                                 @resource.Name //
                                             </a>
                                         }

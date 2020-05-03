@@ -55,6 +55,17 @@
     border-bottom: 1px solid #cfcfcf;
     font-size: 1px;
 }
+.bis-links {
+    color: grey
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2a3838;
+}
 
 /* Jumbotron (Banner) */
 
@@ -279,7 +290,7 @@ h6 {
 }
 
 .tftable tr {
-    height: 20px;
+    height: 15px;
     background-color: #2a3838;
 }
 
