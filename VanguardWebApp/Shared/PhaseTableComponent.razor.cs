@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using VanguardWebApp.Models.BiS;
+using VanguardWebApp.Enums;
 
 namespace VanguardWebApp.Shared
 {

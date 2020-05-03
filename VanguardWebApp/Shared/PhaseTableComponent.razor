@@ -7,7 +7,58 @@
                 <th></th>
                 <th></th>
             </tr>
-            @foreach (var gear in phase.Gear)
+            @foreach (var gear in phase.Gear.Where(w => w.Slot == Slot.Armor))
+            {
+                <tr>
+                    <td width="28">
+                        <a href="https://classic.wowhead.com/item=@gear.ItemId" target="_blank">
+                            <img src=@GetIconPath(gear.ItemId)>
+                        </a>
+                    </td>
+                    <td class="table_lootname">
+                        @gear.Name
+                    </td>
+                </tr>
+            }
+            <tr>
+                <th></th>
+                <th></th>
+            </tr>
+            @foreach (var gear in phase.Gear.Where(w => w.Slot == Slot.Finger))
+            {
+                <tr>
+                    <td width="28">
+                        <a href="https://classic.wowhead.com/item=@gear.ItemId" target="_blank">
+                            <img src=@GetIconPath(gear.ItemId)>
+                        </a>
+                    </td>
+                    <td class="table_lootname">
+                        @gear.Name
+                    </td>
+                </tr>
+            }
+            <tr>
+                <th></th>
+                <th></th>
+            </tr>
+            @foreach (var gear in phase.Gear.Where(w => w.Slot == Slot.Trinket))
+            {
+                <tr>
+                    <td width="28">
+                        <a href="https://classic.wowhead.com/item=@gear.ItemId" target="_blank">
+                            <img src=@GetIconPath(gear.ItemId)>
+                        </a>
+                    </td>
+                    <td class="table_lootname">
+                        @gear.Name
+                    </td>
+                </tr>
+            }
+            <tr>
+                <th></th>
+                <th></th>
+            </tr>
+            @foreach (var gear in phase.Gear.Where(w => w.Slot == Slot.Weapon))
             {
                 <tr>
                     <td width="28">

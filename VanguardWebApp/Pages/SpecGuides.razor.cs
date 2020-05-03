@@ -17,6 +17,11 @@ namespace VanguardWebApp.Pages
 
         public BiS BiS { get; set; } = new BiS();
 
+        public string GetIconPath(string specName)
+        {
+            return $"/images/spec/{specName}.png";
+        }
+
         protected override async Task OnInitializedAsync()
         {
             BiS = await APIAccessService.GetBiSLists();
