@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,9 @@ namespace VanguardWebApp.Shared
         [Parameter]
         public RosterSpec RosterSpec  { get; set; }
 
+        [Inject]
+        public IJSRuntime JSRuntime { get; set; }
+
         public string GetNationalityFlag(Player player)
         {
             var formattedSpec = $"/images/flags/{player.Nationality}.png";
@@ -22,6 +26,12 @@ namespace VanguardWebApp.Shared
         {
             var formattedSpec = $"/images/spec/{RosterSpec.Spec}.png";
             return formattedSpec;
+        }
+
+        public void NavigateToLogs(Player player)
+        {
+            var url = $@"https://classic.warcraftlogs.com/character/eu/gandling/{player.Name}";
+            JSRuntime.InvokeAsync<object>("open", url, "_blank");
         }
     }
 }

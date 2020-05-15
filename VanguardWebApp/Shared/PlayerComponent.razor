@@ -4,10 +4,10 @@
     </tr>
     @foreach (var player in RosterSpec.Players)
     {
-        <tr>
+        <tr @onclick="() => NavigateToLogs(player)">
             <td>
                 <div class="container">
-                    <div class="row">
+                    <div class="row click">
                         <div class="left-div">
                             <img src="@GetSpecIcon()" title=@RosterSpec.Spec.ToString() />
                         </div>
