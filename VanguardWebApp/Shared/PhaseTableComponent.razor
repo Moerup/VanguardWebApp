@@ -7,7 +7,7 @@
                 <th></th>
                 <th></th>
             </tr>
-            @foreach (var gear in phase.Gear.Where(w => w.Slot == Slot.Armor))
+            @foreach (var gear in phase.Gear.Where(x => Groups.IsArmor(x.Slot)))
             {
                 <tr>
                     <td width="28">
@@ -58,8 +58,25 @@
                 <th></th>
                 <th></th>
             </tr>
-            @foreach (var gear in phase.Gear.Where(w => w.Slot == Slot.Weapon))
+            @foreach (var gear in phase.Gear.Where(x => Groups.IsWeapon(x.Slot)))
             {
+                <tr>
+                    <td width="28">
+                        <a href="https://classic.wowhead.com/item=@gear.ItemId" target="_blank">
+                            <img src=@GetIconPath(gear.ItemId)>
+                        </a>
+                    </td>
+                    <td class="table_lootname">
+                        @gear.Name
+                    </td>
+                </tr>
+            }
+            @foreach (var gear in phase.Gear.Where(w => w.Slot == Slot.Ranged))
+            {
+                <tr>
+                    <th></th>
+                    <th></th>
+                </tr>
                 <tr>
                     <td width="28">
                         <a href="https://classic.wowhead.com/item=@gear.ItemId" target="_blank">
