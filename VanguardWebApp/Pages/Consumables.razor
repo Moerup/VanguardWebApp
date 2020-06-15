@@ -1,0 +1,22 @@
+﻿@page "/consumables"
+
+<div class="table_div">
+    <div>
+        @if (dataIsLoaded == false)
+        {
+            <p>Fetching consumables. Please wait...</p>
+        }
+        @if (dataIsLoaded && ConsumablesCollection != null)
+        {
+            @foreach (var role in ConsumablesCollection.Roles)
+            {
+                @foreach (var consumable in role.Consumables)
+                {
+                    <table class="indextable">
+                        <h3>@consumable.Name</h3>
+                    </table>
+                }
+            }
+        }
+    </div>
+</div>

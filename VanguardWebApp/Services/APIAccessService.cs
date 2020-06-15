@@ -8,6 +8,7 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using VanguardWebApp.Models;
 using VanguardWebApp.Models.BiS;
+using VanguardWebApp.Models.Consumables;
 
 namespace VanguardWebApp.Services
 {
@@ -49,6 +50,16 @@ namespace VanguardWebApp.Services
             using var content = response.Content;
             string result = await content.ReadAsStringAsync();
             var model = JsonConvert.DeserializeObject<BiS>(result);
+            return model;
+        }
+
+        public async Task<ConsumablesCollection> GetConsumablesCollectionAsync()
+        {
+            var requestUrl = @$"{_endpoint}/consumables";
+            using var response = await _client.GetAsync(requestUrl);
+            using var content = response.Content;
+            string result = await content.ReadAsStringAsync();
+            var model = JsonConvert.DeserializeObject<ConsumablesCollection>(result);
             return model;
         }
     }
