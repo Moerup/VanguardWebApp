@@ -23,5 +23,10 @@ namespace VanguardWebApp.Pages
             dataIsLoaded = true;
             await base.OnInitializedAsync();
         }
+        public string GetIconPath(int itemId)
+        {
+            return $"/images/icons/{itemId}.png";
+        }
+
     }
 }

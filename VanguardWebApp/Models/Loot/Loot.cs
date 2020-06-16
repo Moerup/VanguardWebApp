@@ -16,8 +16,6 @@ namespace VanguardWebApp.Models
 
         public int GPValue { get; set; }
 
-        public string ImagePath { get; set; }
-
         public List<Priority> Priorities { get; set; }
     }
 }
