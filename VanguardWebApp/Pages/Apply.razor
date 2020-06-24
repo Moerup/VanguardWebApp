@@ -1,85 +1,98 @@
 ﻿@page "/Apply"
 
-<div class="container body_main" style="margin-bottom: 100px;">
+
+@if (StatusMessage != null)
+{
     <div class="row">
-        <div class="col">
-            <h1>General Info</h1>
-
-            <ul class="apply-list">
-                <li class="font-weight-bold">Level:</li>
-                <li>Semi-Hardcore</li>
-            </ul>
-
-            <ul class="apply-list">
-                <li class="font-weight-bold">Raid days:</li>
-                <li>Wednesday 20:00-23:00 CET (If needed)</li>
-                <li>Sunday 20:00-23:00 CET (Main raid)</li>
-            </ul>
-
-            <ul class="apply-list">
-                <li class="font-weight-bold">Loot rules:</li>
-                <li>Priority System with a customized EPGP price list.</li>
-            </ul>
-
-            <ul class="apply-list">
-                <li class="font-weight-bold">Mandatory Addons:</li>
-                <li>https://www.curseforge.com/wow/addons/cepgp</li>
-                <li>https://www.curseforge.com/wow/addons/angry-assignments</li>
-                <li>https://www.curseforge.com/wow/addons/threatclassic2</li>
-            </ul>
-
+        <div class="col-md-3" />
+        <div class="col-md-6 d-flex justify-content-center text-center">
+            <div class="alert @StatusClass">@StatusMessage</div>
         </div>
+        <div class="col-md-3" />
+    </div>
+}
+else
+{
+    <div class="container body_main" style="margin-bottom: 100px;">
+        <div class="row">
+            <div class="col">
+                <h1>General Info</h1>
 
-        <div class="col">
+                <ul class="apply-list">
+                    <li class="font-weight-bold">Level:</li>
+                    <li>Semi-Hardcore</li>
+                </ul>
 
-            <h1>Apply</h1>
+                <ul class="apply-list">
+                    <li class="font-weight-bold">Raid days:</li>
+                    <li>Wednesday 20:00-23:00 CET (If needed)</li>
+                    <li>Sunday 20:00-23:00 CET (Main raid)</li>
+                </ul>
+
+                <ul class="apply-list">
+                    <li class="font-weight-bold">Loot rules:</li>
+                    <li>Priority System with a customized EPGP price list.</li>
+                </ul>
+
+                <ul class="apply-list">
+                    <li class="font-weight-bold">Mandatory Addons:</li>
+                    <li>https://www.curseforge.com/wow/addons/cepgp</li>
+                    <li>https://www.curseforge.com/wow/addons/angry-assignments</li>
+                    <li>https://www.curseforge.com/wow/addons/threatclassic2</li>
+                </ul>
+
+            </div>
+
+            <div class="col">
+
+                <h1>Apply</h1>
 
 
-            <EditForm Model="@_application" OnValidSubmit="SendApplication">
-                <div class="alert @StatusClass">@StatusMessage</div>
-                <DataAnnotationsValidator />
-                <ValidationSummary />
+                <EditForm Model="@_application" OnValidSubmit="SendApplication">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
 
-                <div class="form-group">
-                    <label>Character Name:</label>
-                    <div>
-                        <InputText class="form-control" @bind-Value="_application.CharacterName" />
+                    <div class="form-group">
+                        <label>Character Name:</label>
+                        <div>
+                            <InputText class="form-control" @bind-Value="_application.CharacterName" />
+                        </div>
                     </div>
-                </div>
 
 
-                <div class="form-group">
-                    <label>Class:</label>
-                    <div>
-                        <InputText class="form-control" @bind-Value="_application.Class" />
+                    <div class="form-group">
+                        <label>Class:</label>
+                        <div>
+                            <InputText class="form-control" @bind-Value="_application.Class" />
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label>Spec:</label>
-                    <div>
-                        <InputText class="form-control" @bind-Value="_application.Spec" />
+                    <div class="form-group">
+                        <label>Spec:</label>
+                        <div>
+                            <InputText class="form-control" @bind-Value="_application.Spec" />
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label>Message:</label>
-                    <div>
-                        <InputTextArea class="form-control" rows="3" @bind-Value="_application.Message" />
+                    <div class="form-group">
+                        <label>Message:</label>
+                        <div>
+                            <InputTextArea class="form-control" rows="3" @bind-Value="_application.Message" />
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label>
-                        <InputCheckbox @bind-Value="_application.Requirements" />
-                        I understand all information on this webpage
-                    </label>
-                </div>
+                    <div class="form-group">
+                        <label>
+                            <InputCheckbox @bind-Value="_application.Requirements" />
+                            I understand all information on this webpage
+                        </label>
+                    </div>
 
 
-                <button class="btn btn-lg btn-dark" type="submit">SUBMIT</button>
+                    <button class="btn btn-lg btn-dark" type="submit">SUBMIT</button>
 
-            </EditForm>
+                </EditForm>
+            </div>
         </div>
     </div>
-</div>
+}
