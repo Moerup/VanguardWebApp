@@ -34,7 +34,7 @@
         @foreach (var priority in loot.Priorities)
         {
             <td class="@CalculatePriorityClass(priority)" width="28">
-                <img src="@FormatSpec(priority)" title=@priority.Spec.ToString()/>
+                <img src="@FormatSpec(priority)" title=@ReturnDisplayName(priority.Spec)/>
             </td>
         }
         <td class="table_gpvalue">

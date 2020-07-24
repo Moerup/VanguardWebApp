@@ -17,9 +17,11 @@ namespace VanguardWebApp.Enums
         Frost,
         Fire,
         Destruction,
-        Combat,
-        Fury,
-        Protection,
+        CombatSword,
+        CombatDagger,
+        FuryHuman,
+        FuryNonHuman,
+        Threat,
         Mitigation
     }
 }

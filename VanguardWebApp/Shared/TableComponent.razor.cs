@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using VanguardWebApp.Enums;
 using VanguardWebApp.Models;
 
 namespace VanguardWebApp.Shared
@@ -58,6 +59,23 @@ namespace VanguardWebApp.Shared
             else
             {
                 return loot.Name;
+            }
+        }
+
+        public string ReturnDisplayName(Spec spec)
+        {
+            switch (spec)
+            {
+                case Spec.CombatSword:
+                    return "Combat Sword";
+                case Spec.CombatDagger:
+                    return "Combat Dagger";
+                case Spec.FuryHuman:
+                    return "Fury Human";
+                case Spec.FuryNonHuman:
+                    return "Fury Non-human";
+                default:
+                    return spec.ToString();
             }
         }
     }
