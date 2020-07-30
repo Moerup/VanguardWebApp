@@ -74,6 +74,8 @@ namespace VanguardWebApp.Shared
                     return "Fury Human";
                 case Spec.FuryNonHuman:
                     return "Fury Non-human";
+                case Spec.Offtank:
+                    return "Off Tank";
                 default:
                     return spec.ToString();
             }
