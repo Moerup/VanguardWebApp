@@ -23,6 +23,7 @@ namespace VanguardWebApp.Enums
         FuryNonHuman,
         Threat,
         Mitigation,
-        Offtank
+        Offtank,
+        Pvp
     }
 }
