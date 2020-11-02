@@ -12,6 +12,9 @@ namespace VanguardWebApp.Models
         public string CharacterName { get; set; }
 
         [Required]
+        public string DiscordName { get; set; }
+
+        [Required]
         public string Class { get; set; }
 
         [Required]

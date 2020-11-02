@@ -25,6 +25,7 @@ public class DiscordWebHookService : IDisposable
         var builder = new EmbedBuilder();
 
         builder.AddField("Character name:", application.CharacterName);
+        builder.AddField("Discord name:", application.DiscordName);
         builder.AddField("Class:", application.Class);
         builder.AddField("Spec:", application.Spec);
         builder.AddField("Message:", application.Message);
