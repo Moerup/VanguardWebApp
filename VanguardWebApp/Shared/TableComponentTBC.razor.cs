@@ -17,10 +17,10 @@ namespace VanguardWebApp.Shared
         {
             if (group.ListValue == 0)
             {
-                return $"/images/loot/{group.ClassGroup}_off.png";
+                return $"/images/loot_tbc/{group.ClassGroup}_off.png";
             }
 
-            var formattedSpec = $"/images/loot/{group.ClassGroup}.png";
+            var formattedSpec = $"/images/loot_tbc/{group.ClassGroup}.png";
             return formattedSpec;
         }
 
@@ -29,14 +29,14 @@ namespace VanguardWebApp.Shared
             return $"/images/icons_tbc/{ItemId}.png";
         }
 
-        public string CalculatePrice(int price)
+        public string CalculatePrice(LootTBC loot, int listValue)
         {
-            if (price == null)
+            if (listValue == 0)
             {
                 return "norank";
             }
 
-            switch (price)
+            switch (loot.Price)
             {
                 case 0:
                     return "priceZero";

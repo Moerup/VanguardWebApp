@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using VanguardWebApp.Models;
 using VanguardWebApp.Services;
+using VanguardWebApp.Shared;
 
 namespace VanguardWebApp.Pages
 {

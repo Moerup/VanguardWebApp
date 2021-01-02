@@ -17,6 +17,6 @@ namespace VanguardWebApp.Models
         [Required]
         public string Name { get; set; }
 
-        public List<Boss> Bosses { get; set; }
+        public List<BossTBC> Bosses { get; set; }
     }
 }

@@ -13,6 +13,7 @@ namespace VanguardWebApp.Models
     public class Group
     {
         [JsonConverter(typeof(StringEnumConverter))]
+        [JsonProperty("Group")]
         public ClassGroup ClassGroup { get; set; }
 
         public int ListValue { get; set; }

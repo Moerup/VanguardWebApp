@@ -22,7 +22,7 @@
 
         @foreach (var group in loot.Groups)
         {
-            <td class="@CalculatePrice(group.ListValue)" width="28">
+            <td class="@CalculatePrice(loot, group.ListValue)" width="28">
                 <img src="@FormatSpec(group)" title=@ReturnDisplayName(group.ClassGroup)/>
             </td>
         }
