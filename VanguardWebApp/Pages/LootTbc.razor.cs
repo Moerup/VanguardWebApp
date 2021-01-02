@@ -22,7 +22,7 @@ namespace VanguardWebApp.Pages
 
         protected override async Task OnInitializedAsync()
         {
-            Raid = await APIAccessService.GetRaidLootAsync(RaidName);
+            RaidTBC = await APIAccessService.GetRaidTbcLootAsync(RaidName);
             dataIsLoaded = true;
             await base.OnInitializedAsync();
         }
