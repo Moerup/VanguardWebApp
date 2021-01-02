@@ -328,6 +328,18 @@ h6 {
     background-color: #0070FF;
 }
 
+    .tftable td.priceZero {
+        background-color: #c3c3c3;
+    }
+
+    .tftable td.priceOne {
+        background-color: #1a3b68;
+    }
+
+    .tftable td.priceTwo {
+        background-color: #9d0202;
+    }
+
 .indextable {
     width: 100%;
     border-color: #FFFFFF;
