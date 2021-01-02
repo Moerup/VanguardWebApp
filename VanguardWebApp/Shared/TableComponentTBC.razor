@@ -1,0 +1,34 @@
+﻿<table class="tftable" border="1">
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th><center>PRICE</center></th>
+    </tr>
+    @foreach (var loot in Boss.Loot)
+    {
+    <tr>
+        <td width="28">
+            <a href="https://classic.wowhead.com/item=@loot.ItemID" target="_blank">
+                <img src=@GetIconPath(loot.ItemID)>
+            </a>
+        </td>
+        <td class="table_lootname">
+            @loot.Name
+        </td>
+
+        @foreach (var group in loot.Groups)
+        {
+            <td class="@CalculatePrice(group.ListValue)" width="28">
+                <img src="@FormatSpec(group)" title=@ReturnDisplayName(group.ClassGroup)/>
+            </td>
+        }
+        <td class="table_gpvalue">
+            <center>@loot.Price</center>
+        </td>
+    </tr>
+    }
+</table>

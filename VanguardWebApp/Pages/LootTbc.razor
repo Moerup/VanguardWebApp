@@ -1,0 +1,23 @@
+﻿@page "/tbc/{RaidName}"
+
+<div class="table_div">
+    <div>
+        @if (dataIsLoaded == false)
+        {
+            <p>Fetching loot data. Please wait...</p>
+        }
+        @if (dataIsLoaded && Raid != null)
+        {
+            <table align="right">
+                <tr><td align="right">PRIORITY <b>1</b></td><td width="16"><img style="margin: 10px" src="/images/legendary.png" width="20" height="20"></td><td align="right">PRIORITY <b>2</b></td><td width="16"><img style="margin: 10px" src="/images/epic.png" width="20" height="20"></td><td align="right">PRIORITY <b>3</b></td><td width="16"><img style="margin: 10px" src="/images/rare.png" width="20" height="20"></td></tr>
+            </table>
+            @foreach (var bosses in RaidTBC.Bosses)
+            {
+                <table class="indextable">
+                    <h3>@bosses.Name</h3>
+                </table>
+                <TableComponent Boss=bosses />
+            }
+        }
+    </div>
+</div>

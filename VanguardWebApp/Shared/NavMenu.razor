@@ -26,6 +26,20 @@
                 </div>
             </li>
             <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" id="dropDownTbcLoot" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">TBC LOOT</a>
+                <div class="dropdown-menu animate slideIn" aria-labelledby="dropDownTbcLoot">
+                    <a class="dropdown-item" @onclick="@(e => NavigateTo("/tbc/KARA"))" href="">KARAZHAN</a>
+                    <a class="dropdown-item" @onclick="@(e => NavigateTo("/tbc/GRUUL"))" href="">GRUUL'S LAIR</a>
+                    <a class="dropdown-item" @onclick="@(e => NavigateTo("/tbc/MAGTH"))" href="">MAGTHERIDON'S LAIR</a>
+                    <a class="dropdown-item" @onclick="@(e => NavigateTo("/tbc/SSC"))" href="">SERPENTSHRINE CAVERN</a>
+                    <a class="dropdown-item" @onclick="@(e => NavigateTo("/tbc/TK"))" href="">TEMPEST KEEP</a>
+                    <a class="dropdown-item" @onclick="@(e => NavigateTo("/tbc/MH"))" href="">MOUNT HYJAL</a>
+                    <a class="dropdown-item" @onclick="@(e => NavigateTo("/tbc/BT"))" href="">BLACK TEMPLE</a>
+                    <a class="dropdown-item" @onclick="@(e => NavigateTo("/tbc/ZA"))" href="">ZUL'AMAN</a>
+                    <a class="dropdown-item" @onclick="@(e => NavigateTo("/tbc/SUNW"))" href="">SUNWELL</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="" id="dropDownGuild" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RESOURCES</a>
                 <div class="dropdown-menu animate slideIn" aria-labelledby="dropDownGuild">
                     <a class="dropdown-item" @onclick="@(e => NavigateTo("Roster"))" href="">ROSTER</a>
