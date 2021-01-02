@@ -11,7 +11,7 @@ namespace VanguardWebApp.Shared
     public partial class TableComponentTBC
     {
         [Parameter]
-        public BossTBC Boss { get; set; }
+        public BossTBC BossTBC { get; set; }
 
         public string FormatSpec(Group group)
         {
