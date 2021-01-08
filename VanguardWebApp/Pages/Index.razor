@@ -1,6 +1,19 @@
 ﻿@page "/"
-    <div class="body_main margin-index">
-        <div class="body_content">
+    <div class="row">
+        <div class="col-md-4">
+            @if (dataIsLoaded == false)
+            {
+                <p>Fetching player data. Please wait...</p>
+            }
+            @if (dataIsLoaded && RosterTBC != null)
+            {
+                @foreach (var rosterSpec in RosterTBC.RosterSpecs)
+                {
+                    <PlayerComponentTBC RosterSpec=rosterSpec />
+                }
+            }
+        </div>
+        <div class="col-md-8 body_main">
             <h5>GUILD VISION</h5>
             <br>
             <p>
@@ -13,28 +26,4 @@
                 Vanguard is a semi-hardcore guild, that give you a chance to go as hard as possible within one raid day. Without forcing you to dedicate your entire life to WoW!
             </p>
         </div>
-        <div class="breaker"></div>
-        <div class="body_content">
-            <h5>RAIDING</h5>
-            <br>
-            <p>
-                Vanguard is raiding 1-2 days during the week, Wednesday and Sunday 19:45 cet - 23:00 cet ( invites start at 19:00 cet). In the beginning of phase 6 Wednesday will be used for Naxx progression. The main goal is to get down to one raid a week and be able to comfortably clear Naxx during our SUN raid.
-
-                We will not be running AQ and BWL during phase 6, and our main priority will be Naxx.
-            </p>
-        </div>
-        <div class="breaker"</div>
-        <div class="body_content">
-            <h5>﻿LOOT RULES</h5>
-            <p>
-                The guild is running with a "DKP'like" system called EPGP (Effort Points/Gear Points). The system is based on a priority system that ranks players based on gear received and attendance. On top we have a completely custom price list, and spec priority system that will make sure that the right classes get the correct items. You can find an example of the NAXX price list here https://www.vanguard-guild.com/NAXX.
-            </p>
-            <p>
-                During some raids some members might end up on standby. Players on standby will receive 100% effort points as long as they stay active.
-            </p>
-            <p>
-                Decay is happening after each Sunday raid. This will reduce everybody's EP and GP by 15% and will be rolled out across ALL players.
-            </p>
-        </div>
-        <div class="breaker"</div>
     </div>

@@ -8,19 +8,19 @@ using VanguardWebApp.Services;
 
 namespace VanguardWebApp.Pages
 {
-    public partial class RosterPage
+    public partial class Index
     {
         [Inject]
         public APIAccessService APIAccessService { get; set; }
 
         public bool dataIsLoaded = false;
 
-        public Roster Roster { get; set; } = new Roster();
+        public RosterTBC RosterTBC { get; set; } = new RosterTBC();
 
         public string CalculateRosterNumber()
         {
             int rosterNumber = 0;
-            foreach (var rosterSpec in Roster.RosterSpecs)
+            foreach (var rosterSpec in RosterTBC.RosterSpecs)
             {
                 rosterNumber += rosterSpec.Players.Count();
             }
@@ -29,7 +29,7 @@ namespace VanguardWebApp.Pages
 
         protected override async Task OnInitializedAsync()
         {
-            Roster = await APIAccessService.GetRosterAsync();
+            RosterTBC = await APIAccessService.GetRosterTBCAsync();
             dataIsLoaded = true;
             await base.OnInitializedAsync();
         }

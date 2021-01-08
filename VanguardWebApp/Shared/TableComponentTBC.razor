@@ -8,27 +8,97 @@
         <th></th>
         <th><center>PRICE</center></th>
     </tr>
-    @foreach (var loot in BossTBC.Loot)
+    @foreach (var loot in BossTBC.Loot.Where(x => x.Price == 2))
     {
-    <tr>
-        <td width="28">
-            <a href="https://tbcdb.com/?item=@loot.ItemID" target="_blank">
-                <img src=@GetIconPath(loot.ItemID)>
-            </a>
-        </td>
-        <td class="table_lootname">
-            @loot.Name
-        </td>
-
-        @foreach (var group in loot.Groups)
-        {
-            <td class="@CalculatePrice(loot, group.ListValue)" width="28">
-                <img src="@FormatSpec(group)" title=@ReturnDisplayName(group.ClassGroup)/>
+        <tr>
+            <td width="28">
+                <a href="https://tbcdb.com/?item=@loot.ItemID" target="_blank">
+                    <img src=@GetIconPath(loot.ItemID)>
+                </a>
             </td>
-        }
-        <td class="table_gpvalue">
-            <center>@loot.Price</center>
-        </td>
-    </tr>
+            <td class="table_lootname">
+                @loot.Name
+            </td>
+
+            @foreach (var group in loot.Groups)
+            {
+                <td class="@CalculatePrice(loot, group.ListValue)" width="28">
+                    <img src="@FormatSpec(group)" title=@ReturnDisplayName(group.ClassGroup) />
+                </td>
+            }
+            <td class="table_gpvalue">
+                <center>@loot.Price</center>
+            </td>
+        </tr>
+    }
+    @if (BossTBC.Loot.Where(x => x.Price == 2).Any())
+    {
+        <tr style="height:10px">
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    }
+    @foreach (var loot in BossTBC.Loot.Where(x => x.Price == 1))
+    {
+        <tr>
+            <td width="28">
+                <a href="https://tbcdb.com/?item=@loot.ItemID" target="_blank">
+                    <img src=@GetIconPath(loot.ItemID)>
+                </a>
+            </td>
+            <td class="table_lootname">
+                @loot.Name
+            </td>
+
+            @foreach (var group in loot.Groups)
+            {
+                <td class="@CalculatePrice(loot, group.ListValue)" width="28">
+                    <img src="@FormatSpec(group)" title=@ReturnDisplayName(group.ClassGroup) />
+                </td>
+            }
+            <td class="table_gpvalue">
+                <center>@loot.Price</center>
+            </td>
+        </tr>
+    }
+    @if (BossTBC.Loot.Where(x => x.Price == 1).Any())
+    {
+        <tr style="height:10px">
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    }
+    @foreach (var loot in BossTBC.Loot.Where(x => x.Price == 0))
+    {
+        <tr>
+            <td width="28">
+                <a href="https://tbcdb.com/?item=@loot.ItemID" target="_blank">
+                    <img src=@GetIconPath(loot.ItemID)>
+                </a>
+            </td>
+            <td class="table_lootname">
+                @loot.Name
+            </td>
+
+            @foreach (var group in loot.Groups)
+            {
+                <td class="@CalculatePrice(loot, group.ListValue)" width="28">
+                    <img src="@FormatSpec(group)" title=@ReturnDisplayName(group.ClassGroup) />
+                </td>
+            }
+            <td class="table_gpvalue">
+                <center>@loot.Price</center>
+            </td>
+        </tr>
     }
 </table>
